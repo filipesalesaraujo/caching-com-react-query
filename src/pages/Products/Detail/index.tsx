@@ -54,7 +54,7 @@ export const ProductDetail = ({ id }: ProductDetaulProps) => {
       </div>
       <div className="row">
         <label>Image:</label>
-        <img src={product.description} />
+        <img src={product.image} />
       </div>
     </div>
   );
