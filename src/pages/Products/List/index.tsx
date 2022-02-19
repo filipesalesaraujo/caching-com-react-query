@@ -27,7 +27,7 @@ export const ProductList = ({ onProductDetail }: ProductListProps) => {
       });
   }, []);
   if (isLoading) {
-    return <h1>Loading producss list...</h1>;
+    return <h1>Loading products list...</h1>;
   }
   return (
     <div className="container">
