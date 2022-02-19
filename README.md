@@ -1,13 +1,29 @@
-<img src="https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg" />
+## Sobre o projeto
 
-# Caching no front-end com React Query para turbinar nossas aplicações
+Projeto com objetivo de estudo sobre React query para cachear requisições.
 
-Com a tecnologia evoluindo, somos chamados a cada vez mais desenvolver aplicações performáticas, que aproveitem bem os recursos escassos de conectividades de alguns usuários.
+### **Clone do projeto**
 
-Neste vídeo, vamos usar a biblioteca React query para cachear nossas requisições e tornar nosso app muito mais otimizado.
+```bash
+# Abra um terminal e copie este repositório com o comando
+git clone https://github.com/filipesalesaraujo/caching-com-react-query
+# ou use a opção de download.
 
-## Expert
+# Entre na pasta com 
+cd caching-com-react-query
+```
 
-| [<img src="https://avatars.githubusercontent.com/u/29175815?s=400&u=0fee7695511e1dfabdf5eaacd405853d4e69745c&v=4" width="75px;"/>](https://github.com/joaovbibiano) |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                           [João Bibiano](https://github.com/joaovbibiano)                                                           |
+### **Iniciando o projeto**
+
+```bash
+# Instale as dependências
+yarn
+
+# Inicie a Fake API
+yarn server:json
+
+# Em outro terminal, rode a aplicação
+yarn dev
+
+# Acesse http://localhost:3000 no seu navagador
+```
