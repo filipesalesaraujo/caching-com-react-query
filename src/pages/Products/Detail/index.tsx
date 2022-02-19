@@ -3,7 +3,7 @@ import Axios from "axios";
 import { IProduct } from "../../../types/IProduct";
 
 const fetchProduct = (id: number) => {
-  return Axios.get(`https://localhost:3333/products/${id}`).then(
+  return Axios.get(`http://localhost:3333/products/${id}`).then(
     (response) => response.data
   );
 };
@@ -14,13 +14,13 @@ type ProductDetaulProps = {
 
 export const ProductDetail = ({ id }: ProductDetaulProps) => {
   const [product, setProduct] = useState<IProduct>();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setIsLoading(true);
     fetchProduct(id)
-      .then((date) => {
-        setProduct(date);
+      .then((data) => {
+        setProduct(data);
       })
       .finally(() => {
         setIsLoading(false);

@@ -3,20 +3,20 @@ import Axios from "axios";
 import { IProduct } from "../../../types/IProduct";
 
 const fetchProducts = () => {
-  return Axios.get(`https://localhost:3333/products/`).then(
+  return Axios.get(`http://localhost:3333/products`).then(
     (response) => response.data
   );
 };
 
 export const ProductList = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setIsLoading(true);
     fetchProducts()
-      .then((date) => {
-        setProducts(date);
+      .then((data) => {
+        setProducts(data);
       })
       .finally(() => {
         setIsLoading(false);
