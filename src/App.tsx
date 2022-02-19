@@ -9,10 +9,13 @@ function App() {
   const onProductDetail = (id: number) => {
     setProductId(id);
   };
+  const onBackList = () => {
+    setProductId(null);
+  };
   return (
     <div className="App">
       {productId !== null ? (
-        <ProductDetail id={productId} />
+        <ProductDetail id={productId} onBack={onBackList} />
       ) : (
         <ProductList onProductDetail={onProductDetail} />
       )}

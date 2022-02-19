@@ -10,9 +10,10 @@ const fetchProduct = (id: number) => {
 
 type ProductDetaulProps = {
   id: number;
+  onBack: () => void;
 };
 
-export const ProductDetail = ({ id }: ProductDetaulProps) => {
+export const ProductDetail = ({ id, onBack }: ProductDetaulProps) => {
   const [product, setProduct] = useState<IProduct>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -33,7 +34,12 @@ export const ProductDetail = ({ id }: ProductDetaulProps) => {
 
   return (
     <div className="container">
-      <a href="#" onClick={() => {}}>
+      <a
+        href="#"
+        onClick={() => {
+          onBack();
+        }}
+      >
         Voltar a lista de produtos
       </a>
       <div className="row">
