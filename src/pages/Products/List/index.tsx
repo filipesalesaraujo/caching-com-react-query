@@ -8,7 +8,11 @@ const fetchProducts = () => {
   );
 };
 
-export const ProductList = () => {
+type ProductListProps = {
+  onProductDetail: (id: number) => void;
+};
+
+export const ProductList = ({ onProductDetail }: ProductListProps) => {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -42,7 +46,12 @@ export const ProductList = () => {
               <td>{product.id}</td>
               <td>{product.name}</td>
               <td>
-                <a href="#" onClick={() => {}}>
+                <a
+                  href="#"
+                  onClick={() => {
+                    onProductDetail(product.id);
+                  }}
+                >
                   Detail
                 </a>
               </td>
